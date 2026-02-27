@@ -1,0 +1,63 @@
+{
+  "name": "Shelter",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string",
+      "enum": [
+        "mumbai",
+        "chennai",
+        "patna",
+        "guwahati"
+      ]
+    },
+    "ward": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "number"
+    },
+    "longitude": {
+      "type": "number"
+    },
+    "capacity": {
+      "type": "number"
+    },
+    "current_occupancy": {
+      "type": "number",
+      "default": 0
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "open",
+        "full",
+        "closed"
+      ],
+      "default": "open"
+    },
+    "contact_number": {
+      "type": "string"
+    },
+    "facilities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Available facilities like food, water, medical"
+    },
+    "distance_km": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "name",
+    "city"
+  ]
+}
