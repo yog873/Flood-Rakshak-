@@ -1,0 +1,55 @@
+{
+  "name": "SOSEvent",
+  "type": "object",
+  "properties": {
+    "latitude": {
+      "type": "number"
+    },
+    "longitude": {
+      "type": "number"
+    },
+    "city": {
+      "type": "string",
+      "enum": [
+        "mumbai",
+        "chennai",
+        "patna",
+        "guwahati"
+      ]
+    },
+    "ward": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "resolved",
+        "cancelled"
+      ],
+      "default": "active"
+    },
+    "emergency_contact": {
+      "type": "string"
+    },
+    "reporter_name": {
+      "type": "string"
+    },
+    "reporter_email": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "notified_contacts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "city",
+    "status"
+  ]
+}
