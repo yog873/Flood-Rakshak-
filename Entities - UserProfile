@@ -1,0 +1,65 @@
+{
+  "name": "UserProfile",
+  "type": "object",
+  "properties": {
+    "city": {
+      "type": "string",
+      "enum": [
+        "mumbai",
+        "chennai",
+        "patna",
+        "guwahati"
+      ]
+    },
+    "ward": {
+      "type": "string"
+    },
+    "pincode": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string",
+      "enum": [
+        "en",
+        "hi",
+        "ta",
+        "bn",
+        "as"
+      ],
+      "default": "en"
+    },
+    "phone_number": {
+      "type": "string"
+    },
+    "emergency_contact": {
+      "type": "string"
+    },
+    "notification_preference": {
+      "type": "string",
+      "enum": [
+        "push",
+        "sms",
+        "both"
+      ],
+      "default": "push"
+    },
+    "dark_mode": {
+      "type": "boolean",
+      "default": true
+    },
+    "alert_sound_enabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "onboarding_complete": {
+      "type": "boolean",
+      "default": false
+    },
+    "user_email": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "city"
+  ]
+}
