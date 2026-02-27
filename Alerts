@@ -1,0 +1,87 @@
+{
+  "name": "Alert",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string",
+      "enum": [
+        "mumbai",
+        "chennai",
+        "patna",
+        "guwahati"
+      ]
+    },
+    "ward": {
+      "type": "string"
+    },
+    "risk_level": {
+      "type": "string",
+      "enum": [
+        "green",
+        "amber",
+        "red",
+        "critical"
+      ]
+    },
+    "alert_type": {
+      "type": "string",
+      "enum": [
+        "weather",
+        "flood",
+        "evacuation",
+        "sos",
+        "manual"
+      ],
+      "default": "flood"
+    },
+    "source": {
+      "type": "string",
+      "enum": [
+        "imd",
+        "cwc",
+        "community",
+        "ai_prediction",
+        "admin"
+      ],
+      "default": "ai_prediction"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "recommended_action": {
+      "type": "string"
+    },
+    "is_read": {
+      "type": "boolean",
+      "default": false
+    },
+    "prediction_6h": {
+      "type": "number",
+      "description": "Flood probability for next 6 hours (0-100)"
+    },
+    "prediction_12h": {
+      "type": "number",
+      "description": "Flood probability for next 12 hours (0-100)"
+    },
+    "prediction_24h": {
+      "type": "number",
+      "description": "Flood probability for next 24 hours (0-100)"
+    }
+  },
+  "required": [
+    "title",
+    "city",
+    "risk_level"
+  ]
+}
