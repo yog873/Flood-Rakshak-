@@ -1,0 +1,103 @@
+{
+  "name": "FloodReport",
+  "type": "object",
+  "properties": {
+    "description": {
+      "type": "string",
+      "description": "Text description of the flood report"
+    },
+    "photo_url": {
+      "type": "string",
+      "description": "URL of uploaded photo"
+    },
+    "latitude": {
+      "type": "number",
+      "description": "GPS latitude"
+    },
+    "longitude": {
+      "type": "number",
+      "description": "GPS longitude"
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "waterlogging",
+        "knee_deep",
+        "waist_deep",
+        "dangerous_flow",
+        "structural_damage"
+      ],
+      "description": "Severity level"
+    },
+    "city": {
+      "type": "string",
+      "enum": [
+        "mumbai",
+        "chennai",
+        "patna",
+        "guwahati"
+      ]
+    },
+    "ward": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string",
+      "enum": [
+        "en",
+        "hi",
+        "ta",
+        "bn",
+        "as"
+      ],
+      "default": "en"
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": [
+        "unverified",
+        "verified",
+        "flagged"
+      ],
+      "default": "unverified"
+    },
+    "corroboration_count": {
+      "type": "number",
+      "default": 0
+    },
+    "corroborated_by": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of user emails who confirmed"
+    },
+    "ai_severity_score": {
+      "type": "number",
+      "description": "AI-generated severity score 0-100"
+    },
+    "ai_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "AI-detected high-severity keywords"
+    },
+    "moderation_status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected"
+      ],
+      "default": "pending"
+    },
+    "reporter_name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "severity",
+    "city"
+  ]
+}
