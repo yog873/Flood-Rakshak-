@@ -1,0 +1,54 @@
+{
+  "name": "Notification",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "alert",
+        "sos",
+        "community",
+        "system"
+      ],
+      "default": "alert"
+    },
+    "city": {
+      "type": "string"
+    },
+    "ward": {
+      "type": "string"
+    },
+    "risk_level": {
+      "type": "string",
+      "enum": [
+        "green",
+        "amber",
+        "red",
+        "critical"
+      ]
+    },
+    "is_read": {
+      "type": "boolean",
+      "default": false
+    },
+    "user_email": {
+      "type": "string"
+    },
+    "recommended_action": {
+      "type": "string"
+    },
+    "related_alert_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "message"
+  ]
+}
