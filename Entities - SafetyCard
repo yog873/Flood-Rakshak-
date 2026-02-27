@@ -1,0 +1,90 @@
+{
+  "name": "SafetyCard",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "before",
+        "during",
+        "after"
+      ]
+    },
+    "subcategory": {
+      "type": "string",
+      "enum": [
+        "evacuation",
+        "water_safety",
+        "signaling_rescue",
+        "emergency_kit",
+        "children_elderly"
+      ]
+    },
+    "icon_name": {
+      "type": "string"
+    },
+    "translations": {
+      "type": "object",
+      "description": "Translations keyed by language code",
+      "properties": {
+        "hi": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "content": {
+              "type": "string"
+            }
+          }
+        },
+        "ta": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "content": {
+  "type": "string"
+            }
+          }
+        },
+        "bn": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "content": {
+              "type": "string"
+            }
+          }
+        },
+        "as": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "content": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "order": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "title",
+    "category"
+  ]
+}
