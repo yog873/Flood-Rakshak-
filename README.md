@@ -1,6 +1,6 @@
 **Welcome to your Base44 project** 
 
-https://flood-rakshak-safe.base44.app/FloodMap
+App Link - https://flood-rakshak-safe.base44.app/Home
 
 **About**
 
