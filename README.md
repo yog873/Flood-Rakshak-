@@ -1,4 +1,4 @@
-**Welcome to your Base44 project** 
+**Welcome to Base44 project** 
 
 App Link - https://flood-rakshak-safe.base44.app/Home
 
